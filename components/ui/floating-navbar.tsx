@@ -1,5 +1,5 @@
 "use client";
-import React, { JSX, useState } from "react";
+import React, { useState } from "react";
 import {
     motion,
     AnimatePresence,
@@ -33,9 +33,9 @@ export const FloatingNav = ({
         }
     });
 
-    const navItems = [
-        { name: "Work", theme: "light", link: "#work" },
-        { name: "Contact", theme: "dark", link: "#contact" },
+    const navItems: { name: string; themee: "light" | "dark"; link: string }[] = [
+        { name: "Work", themee: "light", link: "#work" },
+        { name: "Contact", themee: "dark", link: "#contact" },
     ];
 
     return (
@@ -61,7 +61,7 @@ export const FloatingNav = ({
                     <Button
                         key={`link=${idx}`}
                         title={navItem.name}
-                        theme={navItem.theme}
+                        themee={navItem.themee}
                         handleClick={() => {
                             // Add navigation logic here (e.g., scroll to the section)
                             window.location.href = navItem.link;

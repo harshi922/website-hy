@@ -39,7 +39,7 @@ const skills = [
 ];
 
 const Skills = () => {
-    const [hovered, setHovered] = useState(null);
+    const [hovered, setHovered] = useState<number | null>(null);
 
     return (
         <section id="Skills" className="px-4 py-10">

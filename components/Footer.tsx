@@ -45,7 +45,7 @@ const Footer = () => {
             <a href="mailto:harshitaay@gmail.com">
               <Button
                 title="Let's get in touch"
-                theme='dark'
+                themee='dark'
               />
             </a>
             <div className="flex items-center md:gap-3 gap-6">

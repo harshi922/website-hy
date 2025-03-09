@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { WavyBackground } from "./ui/wavy-background";
-import reactElementToJSXString from "react-element-to-jsx-string";
-import Button from "./Button";
-import { FaLocationArrow } from "react-icons/fa";
+
 const Hero = () => {
     return (
         <div className="pt-10">

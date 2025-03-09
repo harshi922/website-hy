@@ -1,12 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
 
 
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import Button from "../Button";
-import { p, source } from "motion/react-client";
 
 export const BentoGrid = ({
     className,
@@ -194,7 +192,7 @@ export const BentoGridItem = ({
                             <Button
                                 title={copied ? "Email Copied" : "Copy email"}
                                 handleClick={handleCopy}
-                                theme="light"
+                                themee="light"
                             />
                         </div>
                     )}

@@ -4,7 +4,15 @@ import Image from "next/image";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
 // Define DummyContent as a reusable component
-const DummyContent = ({ category, title, description, src, skills }) => {
+interface DummyContentProps {
+    category: string;
+    title: string;
+    description: string;
+    src: string[];
+    skills: string[];
+}
+
+const DummyContent = ({ category, title, description, src, skills }: DummyContentProps): React.JSX.Element => {
     const skillsList = [
         { name: "C", icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" },
         { name: "C++", icon: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" },
@@ -43,7 +51,7 @@ const DummyContent = ({ category, title, description, src, skills }) => {
     ];
 
     // Get icons for the skills used in the project
-    const skillsIcons = skills.map((skillName) => {
+    const skillsIcons = skills.map((skillName: React.Key | null | undefined) => {
         const skill = skillsList.find((s) => s.name === skillName);
         return skill ? (
             <img key={skillName} src={skill.icon} alt={skill.name} className="w-8 h-8 mx-2" />
@@ -59,7 +67,7 @@ const DummyContent = ({ category, title, description, src, skills }) => {
 
            
             <Image
-                src={src}
+                src={src[0]}
                 alt="Project image"
                 height={500}
                 width={500}
@@ -77,7 +85,7 @@ const data = [
         category: "Computer Vision", 
         title: "Cloud Removal in Satellite Images",
         titlesrc: "/cloud-removal_title.png",
-        src: "/cloud-reomval.png",
+        src: ["/cloud-reomval.png"],
         link: "https://drive.google.com/drive/folders/13gaO6Yz2DeGBTU6qlU4xlKICr0iwKt-f?usp=sharing",
         description: "Worked on a cloud removal architecture that beat SOTA without the use of cloud masks, built a model to mask clouds out dynamically using Autoencoders that consider clouds as noise, built a novel algorithm that combines images leveraging SSIM metric, built stable diffusion from scratch to work on latent diffusion super resolution to harmonize satellite sensor images from multiple sources, research paper at ICDM conference in Dubai",
         skills: ["Python", "TensorFlow", "OpenCV", "Scikit-Learn", "Matplotlib", "Seaborn", "Numpy", "Pandas"],
@@ -87,7 +95,7 @@ const data = [
         title: "Automatic Test Case Generation",
         titlesrc: "/codetitle.svg",
         link: "https://drive.google.com/file/d/1PLBsWepKnYNX8gkv8eap53XQ4nsscwSK/view?usp=sharing",
-        src: "/test-gen.png",
+        src: ["/test-gen.png"],
         description: "Worked on a LLM to perform automatic test case generation using Junit Test Cases, fine-tuned code LLMs like CodeLLama and Code-T5 to perform test case gen, built a RAG model with a vector PineCone DB to perform code retrieval to increase coverage, built a RAG based fine-tuned model using CodeLLama ",
         skills: ["Python", "TensorFlow", "PyTorch", "Scikit-Learn", "Numpy", "Pandas"],
     },
@@ -95,7 +103,7 @@ const data = [
         category: "Deep Learning",
         title: "Speech Enhancement for Dysarthria",
         titlesrc: "/speechtitle.svg",
-        src: "/speech-enhance.png",
+        src: ["/speech-enhance.png"],
         link: "https://github.com/harshi922/Slurred-Speech-Enhancement",
         description: "Worked on a speech enhancement system for dysarthria affected individuals, built a one-shot learner that preserves speaker characteristics using neural style transfer models, built a novel speech algorithm that works as a one-shot learner and preserves speaker characteristics",
         skills: ["Python", "TensorFlow", "Keras", "PyTorch", "Matplotlib", "Seaborn"],
@@ -104,7 +112,7 @@ const data = [
         category: "Privacy and Deep Learning",
         title: "Anonymization of PII in Videos",
         titlesrc: "/privacytitle.svg",
-        src: "/privacy.png",
+        src: ["/privacy.png"],
         link: "https://github.com/SaikrishnaRajaraman/video-pii",
         description: "Developed a video PII anonymization framework leveraging computer vision and transformers, implemented multilingual BERT for Named Entity Recognition (NER) in text classification, optimized frame processing with parallelization, and integrated OpenAI’s Whisper for speech-to-text PII detection and muting",
         skills: ["React", "Node.js", "TensorFlow", "Flask", "JavaScript", "HTML", "CSS"],
@@ -113,7 +121,7 @@ const data = [
         category: "GPU Programming",
         title: "Optimized Flash Attention for Deep Learning",
         titlesrc: "/gputitle.svg",
-        src: "/gpu.png",
+        src: ["/gpu.png"],
         link: "https://drive.google.com/file/d/1O0WjujzVi6uJpLLu2Tmf5fw7Yjbwftud/view?usp=sharing",
         description: "Implemented a parallelized attention mechanism using Flash Attention to optimize memory and computational efficiency in transformers, developed a custom Triton kernel for SRAM-based tiled matrix multiplication, integrated with GPT-2 and LoRA for performance evaluation, and achieved significant speedups in forward pass computations",
         skills: ["C++", "CUDA", "Python", "TensorFlow", "PyTorch"],
@@ -122,7 +130,7 @@ const data = [
         category: "Statistical Modelling",
         title: "Suitabilty Prediction for Forestry",
         titlesrc: "/foresttitle.svg",
-        src: "/hsm.png",
+        src: ["/hsm.png"],
         link: "https://docs.google.com/presentation/d/1Cp_cic37WQlHZN1CTKY5X1XoI0lmc0-U/edit?usp=sharing&ouid=116499659741137431309&rtpof=true&sd=true",
         description: "Working on building a multi-modal recommendation system to predict a suitability score for tree species to enhance forest yield based on proprietary tree species data for a forestry company, working on a GSI paper. Building an open- source tool to provide aggregated climate, physiological, and surface data(RSI) of the earth at a common resolution by architecting a solution centered around a PostGIS(Postgres) database of large raster data with SQL querying of spatio - temporal information, exposing the gathered data using a REST API built on FastAPI, working on a data paper, providing dashboards built on Tableau for client visualizations, using Airflow to populate the database with periodically updated data sources",
         skills: ["Postgres", "TensorFlow", "Scikit-Learn", "Matplotlib", "Seaborn", "Numpy", "Pandas"],
@@ -131,7 +139,7 @@ const data = [
         category: "Machine Learning",
         title: "DDoS Intrusion Detection System",
         titlesrc: "/ddostitle.svg",
-        src: "/HMLM.png",
+        src: ["/HMLM.png"],
         link: "https://github.com/harshi922/ddos-in-d2d",
         description: "Worked on a DDoS intrusion detection that worked on improving security in 5G D2D networks, Built a dataset by emulating attacks on a D2D network and processing and cleaning packets to build a new dataset by expanding on the benchmark,  i.	Built a model that beat the SOTA using a hierarchical ML model built on simple neural nets in terms of time vs accuracy tradeoff, ii.	Worked on publishing a dataset collected by simulating attacks on a 5G D2D system using CicFloMeter and Wireshark ",
         skills: ["C++", "CUDA", "Python", "TensorFlow", "PyTorch"],
@@ -139,7 +147,7 @@ const data = [
 ];
 export function Projects() {
     const cards = data.map((project, index) => (
-        <Card key={index} card={{ ...project, content: <DummyContent {...project} /> }} index={index} layout={true} />
+        <Card key={index} cardd={{ ...project, content: <DummyContent {...project} /> }} index={index} layout={true} />
     ));
 
     return (
