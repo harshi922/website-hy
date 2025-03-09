@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const skills = [
@@ -58,7 +59,7 @@ const Skills = () => {
                         }}
                     >
                         {hovered === index ? (
-                            <img src={skill.icon} alt={skill.name} className="w-10 h-10" />
+                            <Image src={skill.icon} alt={skill.name} className="w-10 h-10" />
                         ) : (
                             <span className="text-sm md:text-base lg:text-lg font-medium text-center">{skill.name}</span>
                         )}

@@ -1,8 +1,6 @@
-import { section } from 'motion/react-client'
 import React from 'react'
 import { BentoGrid, BentoGridItem } from './ui/bento-grid'
 import { gridItems } from '@/data'
-import { title } from 'process'
 
 const Grid = () => {
   return (

@@ -17,7 +17,7 @@ const Hero = () => {
                     </p>
                         
                     <p className="text-center text-xl md:text-lg md:text-center mt-4 text-zinc-600 font-semibold inter-var sm:px-10 px-5">
-                        I am a Computer Science Master's student at NC State University with a passion for AI, deep learning, and full-stack development. My work spans research in generative AI, geospatial databases, and high-performance computing, where I optimize algorithms for efficiency and scalability.
+                        I am a Computer Science MS student at NC State University with a passion for AI, deep learning, and full-stack development. My work spans research in generative AI, geospatial databases, and high-performance computing, where I optimize algorithms for efficiency and scalability.
                     </p>
 
                 </WavyBackground>

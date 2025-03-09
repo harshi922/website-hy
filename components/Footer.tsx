@@ -29,7 +29,7 @@ const Footer = () => {
 
             <div className="flex flex-col items-center">
             <p className="text-[4rem] md:text-[7rem] lg:text-[10rem] bg-gradient-to-r from-[hsl(0,0%,0%)] via-[] to-[#ffffff] bg-clip-text text-transparent font-base inter-var text-center">
-              Let's connect!
+              Connect with me!
             </p> 
             <img
               src="harshitaa yarramsetti resume.png"

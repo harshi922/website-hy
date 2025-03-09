@@ -2,7 +2,6 @@ import React from 'react'
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { text } from 'stream/consumers';
 const WorkEx = () => {
     const data = [
         {
@@ -100,7 +99,7 @@ const WorkEx = () => {
                         Full Stack Software Development Intern, Ingenium
                     </p>
                     <p className="text-neutral-800 dark:text-neutral-200 text-s md:text-m font-normal mb-2">
-                        Developed Fresh 2 Kitchen's Website with Responsive Design
+                        Developed Fresh 2 Kitchen Website with Responsive Design
                     </p>
                     
                 </div>

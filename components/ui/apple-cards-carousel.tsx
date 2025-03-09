@@ -128,7 +128,12 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                                     },
                                 }}
                                 key={"card" + index}
-                                className="last:pr-[5%] md:last:pr-[33%]  rounded-xs"
+                                // className="last:pr-[5%] md:last:pr-[33%]  rounded-xs"
+                                className={cn(
+                                    "last:pr-[5%] md:last:pr-[33%] rounded-xs",
+                                    currentIndex === index ? "border-2 border-blue-500" : ""
+                                )}
+                                onClick={() => handleCardClose(index)}
                             >
                                 {item}
                             </motion.div>

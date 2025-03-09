@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import Button from "../Button";
+import Image from "next/image";
 
 export const BentoGrid = ({
     className,
@@ -36,7 +37,6 @@ export const BentoGridItem = ({
     imgClassName,
     titleClassName,
     spareImg,
-    video
 }: {
     className?: string;
     id: number;
@@ -79,9 +79,11 @@ export const BentoGridItem = ({
                 <div className="w-full h-full absolute">
 
                     {img && (
-                        <img
+                        <Image
                             src={img}
                             alt={img}
+                            width={500}
+                            height={500}
                             className={cn(imgClassName, "object-cover object-center ")}
                         />
                     )}
@@ -91,10 +93,11 @@ export const BentoGridItem = ({
                         } `}
                 >
                     {spareImg && (
-                        <img
+                        <Image
                             src={spareImg}
                             alt={spareImg}
-                            //   width={220}
+                              width={500}
+                            height={500}
                             className="object-cover object-center w-2xl h-full"
                         />
                     )}

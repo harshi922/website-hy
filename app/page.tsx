@@ -1,11 +1,8 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import RecentProjects, { Projects } from "@/components/Projects";
+import { Projects } from "@/components/Projects";
 import WorkEx from "@/components/WorkEx";
-import { motion } from "framer-motion";
-import Skills from "@/components/Skills";
 import CurrentWork from "@/components/CurrentWork";
 import Grid from "@/components/Grid";
 export default function Home() {
