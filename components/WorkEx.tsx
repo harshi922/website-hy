@@ -5,7 +5,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 const WorkEx = () => {
     const data = [
         {
-            title: "Jan 2015 - Present",
+            title: "Jan 2025 - Present",
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-lg md:text-m font-normal mb-2">

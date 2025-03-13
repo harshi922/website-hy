@@ -85,6 +85,8 @@ export const BentoGridItem = ({
                             width={500}
                             height={500}
                             className={cn(imgClassName, "object-cover object-center ")}
+                            style={id === 4 ? { height: "100%" } : {}} // Added inline style for id 4
+                        // fill={id === 4 ? true : undefined} // Use fill prop for id 4 to take full container height
                         />
                     )}
                 </div>
@@ -96,7 +98,7 @@ export const BentoGridItem = ({
                         <Image
                             src={spareImg}
                             alt={spareImg}
-                              width={500}
+                            width={500}
                             height={500}
                             className="object-cover object-center w-2xl h-full"
                         />
@@ -127,8 +129,8 @@ export const BentoGridItem = ({
                         className={`font-sans text-sm lg:text-2xl max-w-96 font-bold z-10 text-[#000000]`}
                         style={{ "paddingTop": ".5rem" }}
                     >
-                       {title}
-                        
+                        {title}
+
                     </div>
                     {/* for the github 3d globe */}
                     {id === 2 &&
@@ -141,9 +143,12 @@ export const BentoGridItem = ({
 
                     {
                         id == 4 && (
-                            <div className="absolute left-65 justify-end">
-                                <h1>About Me</h1>
-                                <p >Interests: painting, martial arts, neuroscience</p>
+
+                            <div className="absolute justify-center ">
+                                <p className="text-zinc-500 text-base">Interests: I love painting in my free time, I have a black belt in Karate and I'm very interested in all things medical!</p>
+                                <h1 className={`font-sans text-sm lg:text-2xl max-w-96 font-bold z-10 text-[#000000]`}
+                                    style={{ "paddingTop": ".5rem" }}>About Me</h1>
+
                             </div>
 
                         )
