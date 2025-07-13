@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "./ui/image-slider";
+import Link from "next/link";
 
 export function CurrentWork() {
     const images = [
@@ -30,10 +31,10 @@ export function CurrentWork() {
             >
 
                 <h2 className="mt-10 pt-20 text-[2rem] md:text-[4rem] lg:text-[5rem] text-center mb-6 text-zinc-400 font-semibold inter-var">
-                    Current Work <br /> Forestry Recommendation System
+                    Recent Work <br /> Forestry Recommendation System
                 </h2>
                 <p className="text-left text-zinc-700 text-base lg:text-xl sm:text-xs mx-auto sm:ml-10 ml-40 sm:mr-20 mr-40">
-                    Working on building a multi-modal recommendation system to predict a suitability score for tree species to enhance Forest yield based on proprietary tree species data for a forestry company. (Working on a GSI paper)
+                    Working on building a multi-modal recommendation system to predict a suitability score for tree species to enhance Forest yield based on tree species data for Camcore.
                 </p>
                 <br />
 

@@ -17,7 +17,12 @@ const Hero = () => {
                     </p>
 
                     <p className="text-center text-xl md:text-lg md:text-center mt-4 text-zinc-600 font-semibold inter-var sm:px-10 px-5 mx-4">
-                        Data Enthusiast and Full Stack Developer with expertise in AI, geospatial technologies, and cloud solutions. Combining research experience from NC State University and the University of Cyprus with technical skills in Python, TensorFlow, AWS, and modern web frameworks to deliver innovative solutions. Passionate about leveraging data science and computer vision to solve complex problems, with published research in cloud image processing and security systems.                    </p>
+
+                        Aspiring Software Engineer | Innovating for good with Software, Data and AI
+                        <br />
+
+                        I love building cool, usable stuff which makes a real difference to people and I don't like typing up LinkedIn style taglines (I probably should). 
+                    </p>
                 </WavyBackground>
 
             </div>

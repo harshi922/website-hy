@@ -54,7 +54,7 @@ const DummyContent = ({ category, title, description, src, skills }: DummyConten
     const skillsIcons = skills.map((skillName: React.Key | null | undefined) => {
         const skill = skillsList.find((s) => s.name === skillName);
         return skill ? (
-            <Image key={skillName} src={skill.icon} alt={skill.name} className="w-8 h-8 mx-2" />
+            <Image key={skillName} src={skill.icon} alt={skill.name} width={32} height={32} className="w-8 h-8 mx-2" />
         ) : null;
     });
 
